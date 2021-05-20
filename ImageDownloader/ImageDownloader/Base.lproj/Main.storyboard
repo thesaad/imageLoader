@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageDownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress Image View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhO-gU-5fu">
+                                <rect key="frame" x="65" y="112" width="284" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="t2C-MA-so6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1fg-jd-frq" customClass="ProgressImageView" customModule="ImageDownloader" customModuleProvider="target">
+                                <rect key="frame" x="44" y="193" width="323" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="149" id="dNN-ZK-AGr"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wxq-MK-tns" customClass="ProgressImageView" customModule="ImageDownloader" customModuleProvider="target">
+                                <rect key="frame" x="44" y="365" width="323" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="149" id="xYp-Ey-gb9"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fha-KR-ygT" customClass="ProgressImageView" customModule="ImageDownloader" customModuleProvider="target">
+                                <rect key="frame" x="44" y="537" width="323" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="149" id="vUL-ME-fKM"/>
+                                </constraints>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ni1-vr-OBa">
+                                <rect key="frame" x="115" y="821" width="184" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="454-t2-brD"/>
+                                </constraints>
+                                <state key="normal" title="Uploade Images"/>
+                                <connections>
+                                    <action selector="uploadeImagesTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k2v-Xd-Dfx"/>
+                                </connections>
+                            </button>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bqP-f8-zGJ">
+                                <rect key="frame" x="44" y="788" width="323" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="1KJ-xj-AvT"/>
+                                </constraints>
+                            </progressView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uploading Image..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNY-8v-nH0">
+                                <rect key="frame" x="15" y="743" width="259" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="R4f-f7-bbC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wxq-MK-tns" firstAttribute="top" secondItem="1fg-jd-frq" secondAttribute="bottom" constant="23" id="6wV-ZO-wNL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ni1-vr-OBa" secondAttribute="trailing" constant="115" id="7zL-gf-D6y"/>
+                            <constraint firstItem="Fha-KR-ygT" firstAttribute="top" secondItem="wxq-MK-tns" secondAttribute="bottom" constant="23" id="JO0-p3-Gav"/>
+                            <constraint firstItem="Ni1-vr-OBa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="R97-EM-I95"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhO-gU-5fu" secondAttribute="trailing" constant="65" id="Rot-zS-Igl"/>
+                            <constraint firstItem="wxq-MK-tns" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="USb-sX-UXa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CNY-8v-nH0" secondAttribute="bottom" constant="95" id="UsJ-7x-28O"/>
+                            <constraint firstItem="1fg-jd-frq" firstAttribute="top" secondItem="bhO-gU-5fu" secondAttribute="bottom" constant="57" id="YN3-IA-Ocr"/>
+                            <constraint firstItem="bqP-f8-zGJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="ZLQ-3U-uPD"/>
+                            <constraint firstItem="bhO-gU-5fu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="aNG-I6-lFm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1fg-jd-frq" secondAttribute="trailing" constant="47" id="bhm-g9-JSa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bqP-f8-zGJ" secondAttribute="bottom" constant="70" id="l6w-31-sTB"/>
+                            <constraint firstItem="Fha-KR-ygT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="m8y-rW-bDr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CNY-8v-nH0" secondAttribute="trailing" constant="140" id="mgK-wS-kZI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bqP-f8-zGJ" secondAttribute="trailing" constant="47" id="mve-gL-aQ6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fha-KR-ygT" secondAttribute="trailing" constant="47" id="nYH-gH-ZzA"/>
+                            <constraint firstItem="bhO-gU-5fu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="s2c-NH-4X7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wxq-MK-tns" secondAttribute="trailing" constant="47" id="sal-FT-JNu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ni1-vr-OBa" secondAttribute="bottom" constant="4" id="uMy-kI-3uz"/>
+                            <constraint firstItem="1fg-jd-frq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="usY-bR-ePo"/>
+                            <constraint firstItem="CNY-8v-nH0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="yOX-xN-gbg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imagView1" destination="1fg-jd-frq" id="6xj-hP-olg"/>
+                        <outlet property="imagView2" destination="wxq-MK-tns" id="aIm-sk-zau"/>
+                        <outlet property="imagView3" destination="Fha-KR-ygT" id="adR-RV-egB"/>
+                        <outlet property="uploadButton" destination="Ni1-vr-OBa" id="kD0-Dc-hJJ"/>
+                        <outlet property="uploadFileLabel" destination="CNY-8v-nH0" id="g1b-NT-Pir"/>
+                        <outlet property="uploadProgressBar" destination="bqP-f8-zGJ" id="rAH-xS-94K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-184.05797101449278" y="59.598214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
